@@ -1,0 +1,46 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.content-right{
+ display:flex;
+align-items: center;
+ justify-content: center;
+
+}
+.content-left{
+padding:30px ;
+    font-size: 18px;
+    font-family: var(--font2);
+ display:flex;
+ flex-direction: column;
+
+ z-index:1;
+ justify-content: center;
+}
+
+.home-articles-content{
+
+    align-self:center;
+    padding: 20px;
+}
+.home-articles{   
+
+
+background-color: rgb(247, 240, 239,0.5);
+    padding:20px;
+    position: relative;
+
+    
+}
+.home-article img{
+width:300px
+}
+.home-article{    
+display: flex;
+    padding: 30px;
+
+}

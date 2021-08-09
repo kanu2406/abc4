@@ -1,0 +1,79 @@
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\title{Connection of Probability with Group Theory}
+\author{Athak Kumar Singh }
+
+\begin{document}
+
+\maketitle
+Mathematics has always been and will always continue to be the queen of all sciences. It is marvellous in the fact that it is both a form of science and a form of art. The beauty of mathematics can only be appreciated by those who do it.\\
+\bigbreak
+For the sake of better understanding and systematic study, mathematics is often divided into branches/fields. It often creates a misconception in the minds of readers and students that these fields are completely disjoint from each other. This, however is not true. No field of maths is exclusive. There are intricate, beautiful and often hidden connections between different areas of mathematics and this article aims to prove the same by establishing relations between two different fields of maths, namely Group Theory and Probability Theory.\\
+\bigbreak
+We shall establish a result known before but not as famous as the results of Group Theory are:-\\
+  \noindent \textbf{Result}:–\\
+   In a cyclic Group $G=<a>$ the probability that a given element $a^k$ is a generator of G does not depend on order of G, say n. It only depends on $\pi (n)$, the positive prime factors of $n$.\\
+Before we proceed with the proof, we shall make use of a lemma:-\\
+\textbf{Lemma}:–\\
+$\phi (p^k)=p^k-p^{k-1}=p^k(1-\frac{1}{p})$, where $p$ is a prime number, $k \in \mathbf{N}$ and $\phi$ is Euler’s Totient Function, also known as Euler’s Phi function\\
+\textbf{Proof} –\\
+By the definition of $\phi ,\; \phi (n)$=no. of positive integers less than n, which are co-prime with n.\\
+Therefore, $\phi (p^k)$=no. of positive integers less than $p^k$, co-prime with it.\\
+Now, Since p is a prime, the only proper divisors of $p$ are $p,2p,3p,……,p^{k-1}p$ which are $p^{k-1}$ in number. For every other positive integer $m,\; gcd(p^k,m)=1$\\
+Therefore, $\phi (p^k)=p^k-p^{k-1} = p^k(1-\frac{1}{p})$\\
+Now, \textbf{the proof of the main result},\\ 
+Let $G=<a>$ be a cyclic group with one of its generators as $a$.\\
+Let order of $G = o(G)=n.$\\ 
+Then, since $o(G)=n$ and no. of generators=$\phi (o(G))$, the probability that a given element of $G$, is a generator of $G$ is given by
+$$P(g) = \frac{\textnormal{no. of generators of}\; G}{\textnormal{no. of elements in}\; G}\\
+       =\frac{\phi (n)}{n} $$\\                                                     \\
+Let $\pi(n)$=set of all positive prime factors of $n = \{ p_1,p_2,\ldots,p_m\}$\\
+By the Fundamental Theorem of Arithmetic,\\
+$n=p_1^{q_1} p_2^{q_2}\ldots p_m^{q_m}$ for some positive integers $q_1,q_2,\ldots,q_m$\\
+Then, $$\phi (n) = \phi (p_1^{q_1} p_2^{q_2}\ldots p_m^{q_m})
+\newline
+                 = \phi (p_1^{q_1}) \phi(p_2^{q_2})\ldots \phi(p_m^{q_m})
+                 \newline
+			     = p_1^{q_1}(1-\frac{1}{p_1}) p_2^{q_2}(1-\frac{1}{p_2}) \ldots p_m^{q_m}(1-\frac{1}{p_m})$$
+			     \hspace{6cm} [By the lemma, since $\phi$ is multiplicative]\\
+Therefore,\\
+$$P(g) =\frac{\phi (n)}{n}\\
+            = \frac{(p_1^{q_1}(1-\frac{1}{p_1}) p_2^{q_2}(1-\frac{1}{p_2})\ldots p_m^{q_m}(1-\frac{1}{p_m}))}{p_1^{q_1} p_2^{q_2} \ldots p_m^{q_m}}\\
+            = (1-\frac{1}{p_1})(1-\frac{1}{p_2})\ldots (1-\frac{1}{p_m})$$\\
+which is independent of n and depends only on $\pi (n)$.\\
+Thus, we have proved what we aimed for.\\
+\bigbreak
+\noindent The result can be illustrated using various examples.\\
+\noindent \textbf{1}. Let $G=\mathbf{Z}_7$ under the operation addition modulo 7\\
+Then, o(G)=7\\
+$\pi (7)={7}$\\
+Generators of G={1,2,3,4,5,6}\\
+$P(g)=\frac{6}{7} = (1-\frac{1}{7})$\\
+\bigbreak
+\noindent \textbf{2}. Let $G=\mathbf{Z}_{12}$ under the operation addition modulo 12\\
+Then, o(G)=12\\
+$\pi (12)={2,3}$\\
+Generators of G={1,5,7,11}\\
+$P(g)=\frac{4}{12} = \frac{1}{3} = (1-\frac{1}{2})(1-\frac{1}{3})\\$
+\bigbreak
+\noindent \textbf{3}. Let $G=\mathbf{Z}_{24}$ under the operation addition modulo 24\\
+Then, o(G)=24\\
+$\pi (12)={2,3}$\\
+Generators of G={1,5,7,11,13,17,19,23}\\
+$P(g)=\frac{8}{24} = \frac{1}{3} = (1-\frac{1}{2})(1-\frac{1}{3})\\$
+\bigbreak
+\noindent \textbf{Note-} From examples 2 and 3, we can notice that both $\mathbf{Z}_{12}$ and $\mathbf{Z}_{24}$ have the same prime factors although their orders are different. Hence, they have the same probability of finding a generator from their elements.\\
+\bigbreak
+Thus, we conclude our article by saying that as more and more discoveries take place, mathematics evolves and intimate connections are established between different fields of study which are otherwise considered exclusive. Mathematics is like a whole new universe consisting of various celestial bodies with everything linked together by basic forces of nature. More than anything else, it contains vacuum which is waiting to be filled by the genius of some human. 
+
+\newpage
+\begin{thebibliography}{2}
+\bibitem{1} Contemporary Abstract Algebra-9th edition by Joseph A. Gallian
+\bibitem{2} Deborah L. Massari, "The probability of generating a cyclic group", Pi Mu Epsilon Journal 7 (1979)
+\end{thebibliography}
+
+
+\end{document}

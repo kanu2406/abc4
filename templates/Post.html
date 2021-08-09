@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>The Computer Science Society SSC </title>
+  <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+  </style>
+  
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+ 
+  <script>
+  MathJax = {
+    loader: {
+      load: [
+        'input/tex-base', '[tex]/newcommand', '[tex]/action',
+        'output/chtml',  'a11y/explorer','[tex]/tagformat'
+      ]
+    },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)'],],
+      displayMath: [             // start/end delimiter pairs for display math
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+      packages: ['base', 'newcommand', 'action'],
+      // packages: {'[+]': ['enclose'],
+      tags: 'all',
+      processEnvironments: true,
+      processRefs: true, 
+      tagIndent: '0.8em',
+      useLabelIds: true,   
+      tagSide: 'right'
+
+    },
+    svg: {
+    fontCache: 'global'
+  }
+
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+ 
+</head>
+
+<body>
+
+
+
+
+  {% set IMAGE= 'images/' +Post.ImgFile  %}
+
+  <!-- 
+<div>
+  <img src="{{ url_for('static', filename=IMAGE)}}" style="    width: 100%;
+  height: auto;
+  max-height:47vw;">
+
+<a href="/" class="top-left" style="font-size:32px; font-weight: 1000; color:white">HOME</a>
+</div> -->
+
+  <div>
+    <img src="{{ url_for('static', filename=IMAGE)}}" style="    width: 100%;
+  height: auto;
+  max-height:47vw;">
+
+    <a href="/" class="top-left" style="font-size:32px; font-weight: 1000; color:white"> <img
+        src="{{ url_for('static', filename='images/prev.png')}}"> </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="float:right"><span> on {{Post.DT}}</span></div>
+  <div class="container" style="max-width:60vw">
+
+
+    <h2 style="margin:revert; margin-top: 20px; margin-left:20vw">{{Post.PostTitle}}</h3>
+    <div class="container"> <span> Written by <b>{{Post.PostedBy}}</b></span></div>
+
+    
+      
+
+     <div class="container">
+      <div class="row">
+       
+        <div class=" mx-auto">
+          {% for para in Post.PostContent %}
+          <p style="font-size:25px">{{para}}</p>
+
+        {% endfor %}
+
+          </div>
+      </div>
+    </div>
+ 
+
+
+  </div>
+
+    <footer class="page-footer text-center  blue">
+
+    <a href="https://www.facebook.com/TheMathematicsSociety/" class="fa fa-facebook"></a>
+    <a href="https://www.linkedin.com/company/mathsoc-ssc" class="fa fa-linkedin"></a>
+    <a href="https://www.instagram.com/mathsoc_ssc/" class="fa fa-instagram"></a>
+    <br>
+
+    <!-- Add font awesome icons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background-color: black; color:white;">
+
+
+      © 2021 Copyright:
+      <i>The Computer Science Society, St. Stephens College </i>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+</body>
+
+</html>
+
+

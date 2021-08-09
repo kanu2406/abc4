@@ -1,0 +1,19 @@
+.post-img img{
+    height: 707px;
+ overflow: hidden;
+ width: 100%;
+
+
+}
+
+.blog-post-content{
+ margin:auto;
+/* background-color:rebeccapurple;  */
+
+}
+.blog-post-content H1{
+ text-align: center;
+}
+.blog-post-content p{
+ font-size:25px
+}
